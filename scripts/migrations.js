@@ -1,1 +1,0 @@
-"INSERT INTO narongsak (name) VALUES('Rose');"

@@ -1,5 +1,8 @@
-// This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
-// https://nextjs.org/learn/dashboard-app/fetching-data
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> } 
+ */
+
 const users = [
   {
     id: '410544b2-4001-4271-9855-fec4b6a6442a',
@@ -180,9 +183,18 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
-module.exports = {
-  users,
-  customers,
-  invoices,
-  revenue,
+exports.seed = async function(knex) {
+  // Deletes ALL existing entries
+  await knex('users').del()
+  await knex('users').insert(users);
+
+  await knex('customers').del()
+  await knex('customers').insert(customers);
+
+  await knex('invoices').del()
+  await knex('invoices').insert(invoices);
+
+  await knex('revenue').del()
+  await knex('revenue').insert(revenue);
+
 };

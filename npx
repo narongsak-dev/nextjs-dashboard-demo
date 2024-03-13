@@ -1,0 +1,3 @@
+Using environment: [35mdevelopment[39m
+[33mmigration file "20240313065830_users.js" failed[39m
+[33mmigration failed with error: create table `users` (`id` int unsigned not null auto_increment primary key, `username` varchar(255) not null, `email` varchar(255) not null, `created_at` timestamp not null default CURRENT_TIMESTAMP, `updated_at` timestamp not null default CURRENT_TIMESTAMP) - Table 'users' already exists[39m
